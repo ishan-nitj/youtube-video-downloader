@@ -9,7 +9,7 @@ How to use:
 *  Download main.py file in your home directory
 *  Open Ubuntu terminal and type:
 python main.py
-*  Enter the title of your music video to be downloaded
+*  Enter the title of your video to be downloaded
 *  The video will be downloaded in best quality in your home directory
 
 ![image](https://github.com/ishan-nitj/youtube-video-downloader/blob/master/image.png)
