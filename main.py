@@ -20,11 +20,21 @@ def geturl(videotitle):
 		data["found"]=False
 	return data
 
-title_name=str(raw_input("Enter video title \n"))
-data=geturl(title_name)
-if data["found"]==False:
-	print "Sorry requested title was not found"
+song_names=str(raw_input("Enter song titles separated with comma \n"))
+list_of_songs=song_names.split(",")
+choice=int(raw_input("Do you wish to download audio or video \n 1)Audio \n 2)Video \n"))
+if choice==1:
+	substring="youtube-dl -f bestaudio "
 else:
-	print "Downloading best quality video for "+data["title"]+"....."
-	string ="youtube-dl -f bestvideo+bestaudio "+data["link"]
-	subprocess.call(string,shell=True)
+	substring="youtube-dl -f bestvideo+bestaudio "
+
+for song in list_of_songs:
+	data=geturl(song)
+	if data["found"]==False:
+		print "Sorry the song %s was not found" %(song)
+	else:
+		print "Downloading "+data["title"]+"....."
+		string =substring+data["link"]
+		subprocess.call(string,shell=True)
+		print "Downloaded "+data["title"]
+		print "\n\n"
