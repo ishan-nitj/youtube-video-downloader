@@ -20,7 +20,7 @@ def geturl(videotitle):
 		data["found"]=False
 	return data
 
-title_name=str(raw_input())
+title_name=str(raw_input("Enter video title \n"))
 data=geturl(title_name)
 if data["found"]==False:
 	print "Sorry requested title was not found"
