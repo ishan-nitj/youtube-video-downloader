@@ -1,11 +1,11 @@
 ## Download songs directly from your ubuntu terminal (video or audio)
-Requirements:
+### Requirements:
 *  BeautifulSoup
   * sudo pip2 install beautifulsoup4
 *  youtube-dl:
   * sudo apt-get install youtube-dl
 
-How to use:
+### How to use:
 *  Download main.py file in your home directory
 *  Open Ubuntu terminal and type:
 				python main.py
