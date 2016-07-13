@@ -4,6 +4,8 @@
   * sudo pip2 install beautifulsoup4
 *  youtube-dl:
   * sudo apt-get install youtube-dl
+* requests
+  * sudo pip2 install requests
 
 ### Installation
 
