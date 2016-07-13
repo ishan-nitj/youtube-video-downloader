@@ -23,6 +23,7 @@ def geturl(videotitle):
 song_names=str(raw_input("Enter song titles separated with comma \n"))
 list_of_songs=song_names.split(",")
 choice=int(raw_input("Do you wish to download audio or video \n 1)Audio \n 2)Video \n"))
+
 if choice==1:
 	substring="youtube-dl -f bestaudio "
 else:
@@ -35,6 +36,10 @@ for song in list_of_songs:
 	else:
 		print "Downloading "+data["title"]+"....."
 		string =substring+data["link"]
-		subprocess.call(string,shell=True)
-		print "Downloaded "+data["title"]
+		try:		
+			subprocess.call(string,shell=True)
+			print "Downloaded "+data["title"]
+		except Exception as e:
+			print "Sorry cant download this song"
+			print type(e).__name__		
 		print "\n\n"
