@@ -1,4 +1,4 @@
-## Download songs directly from your ubuntu terminal (video or audio)
+## Download songs directly from your ubuntu terminal (video or audio) by title name
 ### Requirements:
 *  BeautifulSoup
   * sudo pip2 install beautifulsoup4
